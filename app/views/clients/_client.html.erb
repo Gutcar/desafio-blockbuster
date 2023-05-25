@@ -1,0 +1,19 @@
+<div id="<%= dom_id client %>">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= client.name %> | <%= client.age %> años</h5>
+      <p class="card-text size-18 fw-bold">Peliculas arrendadas</p>
+      <ul>
+        <% client.movies.each do |movie| %>
+          <li><%= movie.to_s %></li>
+        <% end %>
+      </ul>
+      <% if params[:id].nil? && controller_name == 'clients' %>
+        <!-- Código solo en la vista /clients -->
+        <div class="d-flex justify-content-end">
+          <%= link_to "Ver más", client_path(client), class: "btn btn-warning" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

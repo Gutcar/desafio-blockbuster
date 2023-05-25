@@ -1,0 +1,14 @@
+.logo {
+    width: 200px;
+}
+.size-18 {
+    font-size: 18px;
+    color: #20449a;
+}
+.size-25 {
+    font-size: 25px;
+    color: #fdc21f;
+}
+.bg-nav {
+    background-color: #20449a;
+}

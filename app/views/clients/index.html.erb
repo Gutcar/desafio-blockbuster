@@ -1,0 +1,21 @@
+<p style="color: green" class="my-5"><%= notice %></p>
+
+<div class="row my-5">
+  <div class="col-6 d-flex ">
+    <h1 class="fw-bold">Clientes</h1>
+  </div>
+  <div class="col-6 d-flex justify-content-end align-items-center">
+    <%= link_to "Agregar nuevo cliente", new_client_path, class: "btn btn-warning" %>
+  </div>
+</div>
+
+<div id="clients">
+  <div class="row">
+    <% @clients.each do |client| %>
+      <div class="col-lg-4 col-md-6 my-3">
+        <%= render client %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

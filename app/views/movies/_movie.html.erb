@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= movie.name %></h5>
+    <% if params[:id].nil? && controller_name == 'movies' %>
+      <!-- Código solo en la vista /movies -->
+      <div class="d-flex justify-content-end">
+        <%= link_to "Ver más", movie, class: "btn btn-warning" %>
+      </div>
+    <% end %>
+  </div>
+</div>
